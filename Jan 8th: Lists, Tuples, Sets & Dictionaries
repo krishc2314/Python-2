@@ -1,0 +1,37 @@
+n = int(input("Enter the number of students: "))
+
+list1 = []
+list2=[]
+
+for i in range(n):
+   list1.append(input("Enter the students' names: "))
+   list2.append(int(input("Enter their marks: ")))
+
+t1=tuple(list1)
+
+d1 = {}
+for i in range(n):
+   name = list1[i]
+   marks = list2[i]
+   d1[name] = marks
+
+s = set(list2)
+
+while True:
+   choice = int(input("What do you want to see?:\n Type 1 for tuple of students name\n Type 2 for list of marks\n Type 3 for dictionary with marks and names\n Type 4 for set of unique marks.\n"))
+   if 1<=choice<=4:
+      break
+   else:
+      print("Invalid Number. Try again!")
+      continue
+
+if choice == 1:
+   print("The tuple representing students' names is: ",t1)
+elif choice == 2:
+   print("The list representing students' marks is: ",list2)
+elif choice == 3:
+   print("The dictionary represetning students marks and names is:",d1)
+else:
+   print("The set of unique marks is:",s)
+
+
