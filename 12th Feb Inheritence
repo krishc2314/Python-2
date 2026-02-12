@@ -28,7 +28,4 @@ class Manager(Employee):
 
 manager1 = Manager('Krish',18,'ACX3YF',1000000,2,'Administration')
 manager1.display_manager()
-print(' ')
-manager1.display_employee()
-print(' ')
-manager1.display_person()
+
