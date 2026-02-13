@@ -1,0 +1,42 @@
+#Create a class to represent a bank account. Include attributes like account number, balance and methods like deposit,withdraw and check balance
+
+class Bank:
+    def __init__(self,acc_no,balance):
+        self.acc_no = acc_no
+        self.balance = balance
+
+    def deposit(self):
+        amount = float(input("Enter amount to deposit: "))
+        if amount <= 0:
+            print("Deposit amount must be positive!")
+        else:
+            self.balance += amount
+            print(f'{amount} deposited! Current balance: {self.balance}.')
+
+    def withdraw(self):
+        amount = float(input("Enter amount to withdraw: "))
+        if amount <= 0:
+            print("Withdraw amount must be positive!")
+        elif amount > self.balance:
+            print("Insufficient Balance!")
+        else:
+            self.balance -= amount
+            print(f'{amount} withdrawn! Current balance: {self.balance}')
+    
+    def check_balance(self):
+        print(f'Balance for account number {self.acc_no} is {self.balance}.')
+
+account1 = Bank("AX746", 1000000)
+
+while True:
+    choice = int(input("Type:\n1 - Check balance\n2 - Withdraw\n3 - Deposit\n4-Exit the menu\n"))
+    if choice == 1:
+        account1.check_balance()
+    elif choice == 2:
+        account1.withdraw()
+    elif choice == 3:
+        account1.deposit()
+    elif choice == 4:
+        break
+    else:
+        print("Invalid number! Try again")
