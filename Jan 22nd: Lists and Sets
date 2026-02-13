@@ -1,0 +1,52 @@
+fruits = ["banana", "cherry", "apple"]
+quantities = [12, 8, 20]
+print(fruits)
+print(quantities)
+
+fruits.append("mango")
+print(fruits)
+fruits.insert(1, "orange")
+print(fruits)
+fruits.extend(["grape", "pineapple"])
+print(fruits)
+
+quantities[2] = 50
+print(quantities)
+quantities[0:2] = [15, 25, 35]
+print(quantities)
+
+fruits.remove("cherry")
+print(fruits)
+fruits.pop(3)
+print(fruits)
+fruits.clear()
+print(fruits)
+
+fruits.sort()
+print(fruits)
+quantities.sort(reverse=True)
+print(fruits)
+
+set_a = {"1", "2", "3"}
+set_b = {"3", "4", "2"}
+
+print(set_a)
+print(set_b)
+
+print(set_a | set_b)
+print(set_a & set_b)
+print(set_a - set_b)
+
+
+set_a.add("6")
+print(set_a)
+set_a.remove("2")
+print(set_a)
+set_a.discard("10")
+print(set_a)
+set_a.pop()
+print(set_a)
+set_a.clear()
+print(set_a)
+set_a.update({"2", "3"})
+print(set_a)
