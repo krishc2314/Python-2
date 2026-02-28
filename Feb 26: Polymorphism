@@ -1,0 +1,46 @@
+
+#Operator Overloading
+class Box:
+    def __init__(self, wt):
+        self.weight = wt
+
+    def __add__(self, other_box):
+        return self.weight + other_box.weight
+
+bx1 = Box(500)
+bx2 = Box(275)
+print(bx1 + bx2)
+
+#method overloding
+class Calc:
+    def add(self, x, y=0, z=0):
+        return x + y + z
+
+c = Calc()
+print(c.add(15))
+print(c.add(15, 25))
+print(c.add(15, 25, 35))
+
+#overriding
+class Vehicle:
+    def move(self):
+        print("The vehicle is moving")
+
+
+class Car(Vehicle):
+    def move(self):
+        print("The car is being driven")
+
+
+class Cycle(Vehicle):
+    def move(self):
+        print("The cycle is being pedalled")
+
+
+v1 = Vehicle()
+car1 = Car()
+cycle1 = Cycle()
+
+v1.move()
+car1.move()
+cycle1.move()
