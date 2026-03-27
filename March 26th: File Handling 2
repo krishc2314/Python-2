@@ -1,0 +1,13 @@
+import csv
+f=open("Students.csv","w",newline='')
+writer=csv.writer(f)
+writer.writerow(["Name","Marks"])
+writer.writerow(["Aryan","73"])
+writer.writerow(["Ram","95"])
+
+f.close()
+f=open("Students.csv","r")
+reader=csv.reader(f)
+for row in reader:
+   print(row)
+f.close()
