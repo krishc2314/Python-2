@@ -1,0 +1,17 @@
+try:
+    a=int(input("Enter the dividend: "))
+    b=int(input("Enter the divisor: "))
+    quotient=a/b
+    print("The quotient is",quotient)
+
+except ZeroDivisionError:
+    print("Error: Cannot Divide By Zero!")
+
+except ValueError:
+    print("Error: Please Enter A Valid Integer!")
+
+else:
+    print("Division Successful!")
+
+finally:
+    print("Code Executed")
